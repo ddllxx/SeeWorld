@@ -1,0 +1,65 @@
+{% extends "parent/parent.html" %}
+{% block headers %}
+<script src="{{ url_for('static', filename='js/juser.js') }}" defer></script>
+{% endblock %}
+{% block title %} Main {% endblock %}
+{% block body %}
+
+<div class="m-5"></div>
+<div class="w-75 m-auto text-center">
+    <div class="card text-center mb-5">
+        <div class="card-header">
+            <div class="btn-group">
+                <button type="button" class="btn btn-secondary" id="basicInfoBtn">Basic Info</button>
+                <button type="button" class="btn btn-secondary" id="focusBtn">Focus</button>
+                <button type="button" class="btn btn-secondary" id="worldBtn">World</button>
+            </div>
+        </div>
+        <div class="card-body" id="worldPane" hidden>
+            <div id="messageList">
+                <!-- <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Title</h4>
+                        <p class="card-text">Text</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Title</h4>
+                        <p class="card-text">Text</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="card-body" id="infoPane">
+            <h5 class="card-title">Basic Information</h5>
+            <div class="list-group align-items-lg-start mb-5">
+                <p class="card-text">ID: <span class="basicinfoitem" id="ID">{{ id }}</span></p>
+                <p class="card-text">Name: <span class="basicinfoitem" id="name"></span></p>
+                <p class="card-text">Sex: <span class="basicinfoitem" id="sex"></span></p>
+                <p class="card-text">Age: <span class="basicinfoitem" id="age"></span></p>
+                <p class="card-text">Profession: <span class="basicinfoitem" id="profession"></span></p>
+                <p class="card-text">Nation: <span class="basicinfoitem" id="nation"></span></p>
+                <p class="card-text">Introduction: <span class="basicinfoitem" id="introduction"></span></p>
+            </div>
+            <form action="/changePassword" method="post">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Change Password</span>
+                    </div>
+                    <input type="password" class="form-control" name="password" placeholder="new password"/>
+                    <button type="submit" class="input-group-append btn btn-danger">Change</button>
+                </div>
+            </form>
+            <!-- <p class="card-text">Sex: <span sex="sex"></span></p> -->
+        </div>
+        <div class="card-body" id="focusPane" hidden>
+            <h5 class="card-title">Focus</h5>
+            <ul class="list-group" id="focusList">
+                <!-- <li class="list-group-item">pA</li> -->
+            </ul>
+        </div>
+    </div>
+    <button type="button" class="btn btn-danger" id="logoutBtn">Log out</button>
+</div>
+{% endblock %}

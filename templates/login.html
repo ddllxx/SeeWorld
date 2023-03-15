@@ -1,0 +1,29 @@
+{% extends "parent/parent.html" %}
+{% block headers %}
+<script src="{{ url_for('static', filename='js/jlogin.js') }}" defer></script>
+{% endblock %}
+{% block title %} Main {% endblock %}
+{% block body %}
+
+<div class="mb-5"></div>
+
+<div class="w-50 text-center m-auto">
+    <p class="h3">Login</p>
+    <form id="login_form" method="post" action="/login">
+      <div class="input-group text-center m-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text">User Name</span>
+        </div>
+        <input type="text" id="userNameInput" class="form-control text-sm" name="name">
+      </div>
+      <div class="input-group text-center m-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Password</span>
+        </div>
+        <input type="password" id="passwordInput" class="form-control text-sm" name="password">
+      </div>
+      <button id="loginBtn" type="submit" class="btn btn-success">Login</button>
+      <button id="registerBtn" type="button" class="btn btn-primary">Register-></button>
+    </form>
+</div>
+{% endblock %}

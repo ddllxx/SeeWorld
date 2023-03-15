@@ -1,0 +1,44 @@
+{% extends "parent/parent.html" %}
+{% block headers %}
+<script src="{{ url_for('static', filename='js/jsee.js') }}" defer></script>
+{% endblock %}
+{% block title %} Main {% endblock %}
+{% block body %}
+
+<div class="mt-5"></div>
+<div class="text-center w-75 m-auto">
+    <header>
+        <p class="h1">The World</p>
+    </header>
+    <div class="input-group text-center m-3 p-5">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Type</span>
+        </div>
+        <select class="custom-select" id="typeInput">
+            <option value="0" {% if type == '0'%} selected {% endif %}>All</option>
+            <option value="1" {% if type == '1'%} selected {% endif %}>Current Affairs News</option>
+            <option value="2" {% if type == '2'%} selected {% endif %}>Community Discussion</option>
+            <option value="3" {% if type == '3'%} selected {% endif %}>Mutual Assistance Area</option>
+        </select>
+    </div>
+    <div id="messageList">
+        <!-- <div class="card m-2">
+            <div class="card-header">
+                <a href="detail?id=1" class="link">Title</a>
+                <a href="user2?id=1" class="link">@Title</a>
+            </div>
+            <div class="card-body">
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <p class="card-text cardMessageDate">data: 2022-09-01</p>
+            </div>
+        </div> -->
+    </div>
+    <nav class="">
+        <ul class="pagination justify-content-center">
+            <li class="page-item"><a class="page-link" href="see?page={{ page - 1 }}&type={{ type }}" id="prev">Prev</a></li>
+            <li class="page-item"><a class="page-link" id="page">{{ page }}</a></li>
+            <li class="page-item"><a class="page-link" href="see?page={{ page + 1 }}&type={{ type }}" id="next">Next</a></li>
+        </ul>
+    </nav>
+</div>
+{% endblock %}

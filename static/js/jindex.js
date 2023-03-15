@@ -1,0 +1,1 @@
+document.getElementById('know').addEventListener('click', e => document.getElementById('info').remove());

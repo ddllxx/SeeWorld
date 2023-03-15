@@ -1,0 +1,60 @@
+{% extends "parent/parent.html" %}
+{% block headers %}
+{% endblock %}
+{% block title %} Main {% endblock %}
+{% block body %}
+<div class="mb-5"></div>
+
+<div class="w-50 text-center m-auto">
+    <p class="h3">Register</p>
+    <form id="login_form" method="post" action="/register">
+      <div class="input-group m-3 text-center">
+        <div class="input-group-prepend">
+            <span class="input-group-text">User Name*</span>
+        </div>
+        <input type="text" id="userNameInput" class="form-control text-sm" name="name">
+      </div>
+      <div class="input-group m-3 text-center">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Sex*</span>
+        </div>
+        <select id="sexInput" class="custom-select text-sm" name="sex">
+            <option value="man">Man</option>
+            <option value="feman">Feman</option>
+        </select>
+      </div>
+      <div class="input-group m-3 text-center">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Age*</span>
+        </div>
+        <input type="number" class="form-control" name="age" id="ageInput">
+      </div>
+      <div class="input-group m-3 text-center">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Profession*</span>
+        </div>
+        <input type="text" class="form-control" name="profession" id="professionInput">
+      </div>
+      <div class="input-group m-3 text-center">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Nation*</span>
+        </div>
+        <input type="text" id="nationInput" class="form-control text-sm" name="nation">
+      </div>
+      <div class="input-group m-3 text-center">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Introduction</span>
+        </div>
+        <input type="text" id="introductionInput" class="form-control text-sm" name="introduction">
+      </div>
+      <div class="input-group m-3 text-center">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Password*</span>
+        </div>
+        <input type="password" id="passwordInput" class="form-control text-sm" name="password">
+      </div>
+      <p class="sm-text">Your password(at least 5 characters) should be a mix of numbers and letters.</p>
+      <button id="registerBtn" type="submit" class="btn btn-primary">Register</button>
+    </form>
+</div>
+{% endblock %}

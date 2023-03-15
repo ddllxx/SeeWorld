@@ -1,0 +1,18 @@
+{% extends "parent/parent.html" %}
+{% block headers %}
+<script src="{{ url_for('static', filename='js/jindex.js') }}" defer></script>
+{% endblock %}
+{% block title %} Main {% endblock %}
+{% block body %}
+<p class="h1 m-5 font-weight-bolder font-italic">Welcome to See World</p>
+<hr class="my-5">
+<div class="text-center w-75 m-auto">
+    <p class="text-success display-3 mainTitle mb-5 pb-5">Show yourself!</p>
+    <p class="text-primary font-weight-bold mb-5">You can see the world there, communicate with others, enjoy it.</p>
+    <p class="text-info font-italic">See World is a social media platform for people around the world to create and discover. Users can instantly share and spread information from all over the world and interact with each other.</p>
+</div>
+
+<p id='info' class="text-center bg-info cookie-info">This website use cookies to provide better service.
+<a class="btn text-primary font-weight-bolder text-right" id="know"> I know.</a></p>
+
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "parent/parent.html" %}
+{% block headers %}
+{% endblock %}
+{% block title %} Main {% endblock %}
+{% block body %}
+
+<div class="mb-5"></div>
+
+<div class="w-50 text-center m-auto">
+    <div class="form-group">
+        <p class="display-4">Share Your Daily</p>
+        <form action="publishCommit">
+            <div class="input-group m-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">title</span>
+                </div>
+                <input type="text" name="title" id="titleInput" class="form-control" placeholder="title">
+            </div>
+            <div class="input-group m-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">description</span>
+                </div>
+                <input type="text" class="form-control" name="description" id="descriptInput"placeholder="description">
+            </div>
+            <div class="input-group m-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Type</span>
+                </div>
+                <select class="custom-select" name="type">
+                    <option value="1">Current Affairs News</option>
+                    <option value="2">Community Discussion</option>
+                    <option value="3">Mutual Assistance Area</option>
+                </select>
+            </div>
+            <div class="input-group m-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">detail</span>
+                </div>
+                <textarea type="text" class="form-control" name="detail" id="detailInput" placeholder="detail"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">publish</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

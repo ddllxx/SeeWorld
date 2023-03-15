@@ -1,0 +1,46 @@
+/* :root {
+    font-size: calc(1em + 1vw)
+} */
+
+body {
+    /* background-image: url("../img/background.png"); */
+    /* background-size: cover; */
+    background-color: skyblue;
+}
+
+ul.nav > li:hover {
+    background-color: rgba(169, 169, 169, 0.267);
+}
+
+body > div {
+    max-width: 960px;
+}
+
+.cardMessageDate {
+    font-size: 0.5rem;
+    width: fit-content;
+}
+
+.comment {
+    text-align: left;
+    /* display: flex;
+    flex-flow: wrap;
+    justify-content: space-between; */
+}
+
+.comment > p > span {
+    color: rgb(22, 71, 233);
+    font-weight: 700;
+}
+
+.basicinfoitem {
+    color: rgb(22, 71, 233);
+    font-weight: 700;
+}
+
+.cookie-info {
+    position:absolute;
+    top:0;
+    width:100%;
+    height: fit-content;
+}

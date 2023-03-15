@@ -1,0 +1,42 @@
+{% extends "parent/parent.html" %}
+{% block headers %}
+<script src="{{ url_for('static', filename='js/jdetail.js') }}" defer></script>
+{% endblock %}
+{% block title %} Main {% endblock %}
+{% block body %}
+
+
+<div class="mt-5"></div>
+<div class="text-center w-75 m-auto">
+    <header>
+        <p class="h2">Detail</p>
+    </header>
+    <div class="jumbotron">
+        <h1 class="display-5" id="title"></h1>
+        <p class="lead" id="description"></p>
+        <hr class="my-4">
+        <p id="detail"></p>
+    </div>
+    <div class="form-group">
+        <!-- <label for="commentInput">comment</label> -->
+        <form action="/comment">
+            <input type="text" hidden id="IDrecord" name="id" value = "{{ id }}">
+            <div class="input-group">
+                <input class="form-control" name="comment" id="commentInput" placeholder="input your comment"></>
+                <button type="submit" class="btn btn-primary input-group-append" id="commentBtn">comment</button>
+            </div>
+        </form>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">All Comment</h4>
+        </div>
+        <ul class="list-group list-group-flush" id="commentList">
+            <!-- <li class="list-group-item comment">
+                <p><span>Name: </span>message</p>
+                <button class="btn btn-danger">delete</button>
+            </li> -->
+        </ul>
+    </div>
+</div>
+{% endblock %}
